@@ -1,8 +1,8 @@
 clear all;
-fname = @(x) exp(x);
+fname = @(x) exp(x); % change this to the function you want to integrate
 start = 100; % start position
 step = 100; % step
-z = 1000; % how many points to check
+z = 1000; % end position
 
 k = zeros(1,z/step);
 
@@ -15,5 +15,5 @@ for n = start:step:z
     err3(n/step) = errmcm;
 end
 
-plot(k, err2, k, err3);
+plot(k, err2, k, err3); % compare my_mcm and mcm
 legend('my\_mcm', 'mcm');
