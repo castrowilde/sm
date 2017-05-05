@@ -16,7 +16,7 @@ end
 plot(N,err);
 
 disp('mean error:');
-mean(err);
+mean(err)
 
 disp('% error:');
 mean(err) / (pi/10) * 100
