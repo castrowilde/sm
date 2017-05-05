@@ -5,7 +5,7 @@ function [ solution,n ] = Monte_Carlo_solution( n )
     int_fun1 = int_fun();
     
     for i = 1:n
-        solution = int_fun1(x(i),y(i),z(i));
+        solution = solution + int_fun1(x(i),y(i),z(i));
     end
     solution = solution/n;
 end
