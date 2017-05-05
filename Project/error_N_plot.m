@@ -7,3 +7,6 @@ for i = 100:100:1000
 end
 
 plot(N,err);
+title('N,error plot');
+xlabel('N');
+ylabel('error');
