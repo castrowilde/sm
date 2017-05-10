@@ -50,6 +50,7 @@ title(['Solution with ' num2str(start) ' to ' num2str(stop) ' points, step ' num
 MCM = [mean(err);mean(sol)];
 MCM_Halton = [mean(err_H);mean(sol_H)];
 MCM_Sobol = [mean(err_S);mean(sol_S)];
+Actual = [pi/10;0];
 Rnames = {'mean error';'mean solution'};
-t = table(MCM,MCM_Halton,MCM_Sobol,'RowNames',Rnames);
+t = table(MCM,MCM_Halton,MCM_Sobol,Actual,'RowNames',Rnames);
 t
