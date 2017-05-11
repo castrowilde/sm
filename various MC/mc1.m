@@ -1,6 +1,5 @@
-function [errC] = crudeMC(n_max)
 % Example crude MC in Matlab
-
+n_max = 1000;
 a = 0;
 b = 1;
 x = 0;
@@ -13,7 +12,8 @@ while (k < n_max)
 end
 
 y = (b-a) * f/n_max;
+t(4) = y;
 Int = exp(b) - exp(a);
-errC = abs(Int - y);
-
-end
+t(5) = Int;
+err = abs(Int - y);
+t(6) = err;
