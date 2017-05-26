@@ -8,8 +8,8 @@ N = zeros(1,stop/step);
 n = 5000; % points for MCM
 
 for k = start : step : stop
-    [ solution, n ] = Monte_Carlo_solution( n )
-    err(k/step) = abs((pi/10) - solution);
+    [ solution, n ] = Monte_Carlo_solution( n );
+    err(k/step) = (pi/10) - solution;
     N(k/step) = k;
 end
 
